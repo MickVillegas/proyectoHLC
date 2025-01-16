@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>configuration</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">configuration</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-list>
+  <ion-item>
+    <ion-input label = "Nombre" [(ngModel)] = "nameUser" ngDefaultControl></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input label = "Email" type = "email" [(ngModel)] = "emailUser" ngDefaultControl></ion-input>
+  </ion-item>
+</ion-list>
+
+<ion-button style="margin-top: 15px;" (click) = "saveData()">Guardar</ion-button>
+
+<ion-toast
+[isOpen]="isToastOpen"
+(didDismiss) = "hideToast()"
+message = "Se ha guardado correctamente"
+[duration] = "5000"> 
+</ion-toast>
+
+</ion-content>

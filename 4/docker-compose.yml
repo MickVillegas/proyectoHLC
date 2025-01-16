@@ -1,0 +1,14 @@
+services:
+  node:
+    image: docker.io/bitnami/node:latest
+    container_name: node
+    ports:
+      - 8100:8100
+    networks:
+      - HLC  
+    volumes:
+      - .:/app
+    tty: true          
+networks:
+  HLC:
+    name: HLC
